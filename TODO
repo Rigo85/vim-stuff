@@ -1,0 +1,167 @@
+
+-- :127,215 s/foo/bar to change the first occurrence of "foo" into "bar" on each line between 127 and 215.
+-- :% s/foo/bar/g global substitution
+-- :.,$j meaning "from the current line to the last line, join them all into one line". 
+-- :% is synonymous with :1,$ (all the lines).
+-- :... g is a prefix for "globally" applying a subsequent command to all lines which match a pattern (regular expression) 
+	while :... v applies such a command to all lines which do NOT match the given pattern ("v" from "conVerse"). 
+	As with other ex commands these can be prefixed by addressing/range references. 
+	Thus :.,+21g/foo/d means "delete any lines containing the string "foo" from the current one through the next 21 lines" 
+	while :.,$v/bar/d means "from here to the end of the file, delete any lines which DON'T contain the string "bar."
+-- :verbose map cs
+
+-- :%bw -- salvar todas las pestañas y cerrarlas
+
+
+ - x! guardar
+ - :w !sudo tee % guardar cuando estas en modo read only
+ - i insertar
+ - o agrega una linea nueva debajo
+ - u deshacer
+ - ctrl + r rehacer
+ - / para buscar, n - para siguiente shft+n anterior
+ - gg -inicio de archivo
+ - G final del archivo
+ 
+---------------- VIMTUTOR ------------------------------------------
+
+- x elimnar caracter.
+- i insertar
+- a agregar al final de la palabra actual
+- A agregar al final de la linea
+- dw eliminar palabra
+- dw eliminar palabra
+- d$ eliminar hasta el final de la linea
+- 2w te mueves 2 palabras
+- 2e  te mueves 2 palabras
+- d3w elimina 3 palabras
+- d3e elimina 3 palabras
+- dd corta la linea
+- u deshacer
+- U deshacer todo en la linea
+- ctrl+r rehacer
+- p pegar
+- ce sobreescribe la palabra actual, desde la pos actual
+- cc sobreescribe la linea acutal
+- c$ sobre escribe la linea desde la posicion actual
+- r reemplaza caractar en la posicion alctual
+- ctrl+g muestra info del archivo actual
+- G moverte al final del archivo
+-gg moverte al inicio del fichero
+- :num te mueves a la linea num
+- /palabra busca la palabra, n sgte ocurrenci, N anterior ocurrencia, ctrl+o te devuelve a dnd estabas
+- /palabra\c buscan en ignore case
+- ?palabra busca pero al reves
+- % encuentra el match de ()[]{}
+- :s/old/new substituir
+- :s/old/new/g substituir todo en la linea
+- :#,#s/old/new/g substituir desde la linea # hasta la #
+- :%s/old/new/g substituir en todo el archivo
+- :%s/old/new/gc substituir en todo el archivo, pide confirmacion
+- :!<command> ejecuta 
+- :w <filename> guardar archivo actual
+- v seleccion el texto deseado luego :w filename guarda lo seleccionado al archivo filename
+- v seleccion el texto deseado luego :r filename agrega lo seleccionado al archivo filename
+- o agrega una linea debajo de la posición actual
+- O agrega una linea arriba de la posición actual
+- w,e te mueves de palabra en palaba
+- R reemplazar mas de un caracter
+- y copiar
+- yw copia palabra
+- yy copia linea
+
+----------- ideavim ------------------------------------
+- F3: tree
+- leader x: se mueve hacia adelante en las pestañas
+- leader q: se mueve hacia atras
+- ctrl+shit+n: buscar archivos por nombre
+- ctrl+shift+f: buscar en los archivos
+- alt+F12: open terminal
+- ctrl+w w cambia el foco
+- leader h o v split thw view
+- gd salto a la definicion, ctrl+o regreso a dnd estaba
+- ctrl+alt+l: format code
+- gc comenta lo seleccionado
+- gcc comenta una linea, igual q gc flecha derecha
+- gcap comenta un parrafo
+- ctrl+shift+-: colapsa
+- ctrl+shift+"+": expande
+
+--------- pure vim -----------------------------------
+- F3 - activa el tree
+- ctrl+w w cambia el foco
+- leader x cambia pestañas hacia adelante
+- leader q cambia pestañas hacia atrás
+- leader e buscar
+- cd currente drectory
+- leader sh abrir terminal
+- leader h o v split thw view
+- con relativenumber #j o #k salta a dicha linea
+- leader gd salto a la definicion, ctrl+o regreso a dnd estaba
+- F5 activa los cambios
+- :Rg <text> busca dentro de los archivos
+- leader ff format file
+- gc alternar comentarios
+
+- ctrl + n completa en elos commit de los buffers abiertos
+- ]q y q[ se mueve en gitclog
+
+- leader y: history commands
+
+- gc comenta lo seleccionado
+- gcc comenta una linea, igual q gc flecha derecha
+- gcap comenta un parrafo
+
+- leader sf: formato al sql
+- leader se ejecuta sql
+- R refrescar los resultados
+- :DBSetOption DBI_orientation='v'
+- ctrl+r " : pega en el command mode
+- zf colapsa 
+- zd expande
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
